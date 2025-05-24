@@ -1,0 +1,677 @@
+/*start variable*/
+:root {
+    --background-image :linear-gradient(90deg, #2f5c86 , #11397d );
+    --main-color :linear-gradient(90deg, #2f5c86 , #100234);
+    --secondery-color :#ffffff ;
+    --main-padding: 100px;
+}
+/*end variable*/
+/*start global rules*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    
+}
+.main-title h1 {
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1.4;
+    font-family: lastica;
+    font-weight: 100;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+a, ul li {
+    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
+}
+.container {
+    margin-right:auto ;
+    margin-left: auto;    
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    overflow: hidden;
+}
+/*end global rules*/
+/*start fixed*/
+#fixed {
+background-image: var(--background-image);
+height: 160px;
+position: fixed;
+z-index: 1;
+width: 100%;
+}
+#fixed .right-side {
+    display: flex;
+    position: relative;
+    left: 700;
+    bottom: 100;
+}
+#fixed .logo {
+    padding-left: 32px;
+}
+/*end fixed*/
+/*start fp*/
+.fp {
+    background-image: var(--background-image);
+    position: relative;
+}
+.fp #block {
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.header .right-side {
+    display: flex;
+    position: relative;
+    left: 40;
+}
+.header .logo img{
+    border-style: none;
+    width: 110px;
+    color: white;
+    filter: invert(1);
+    height: auto;
+    padding-top: 10px;
+}
+.header .logo p {
+    position: relative;
+    left: 25px;
+    bottom: 17px;
+    font-family: lastica;
+    font-size: 23.5;
+    color: white;
+}
+.header .right-side .navbar {
+    display: flex;
+}
+.header .right-side .navbar ul li a {
+    color: white;
+    text-transform: capitalize;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: lastica;
+    font-size: 27;
+    padding: 0 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.header .right-side .navbar ul li a::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: 0.3s;
+    top: 29px;
+    left: -100%;
+}
+.header .right-side .navbar ul li a:hover {
+    color: white;
+    transition: 0.3s;
+}
+.header .right-side .navbar ul li a:hover::before {
+    left: 0;
+}
+#choose{
+    border: 1px solid white;
+    margin-top: 12px;
+    display: none;
+}
+#number {
+    padding-bottom: 12px;
+}
+.header .right-side .language p {
+    position: relative;
+    right: -30px;
+    color: white;
+    font-size: 23.5;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: none;
+}
+@keyframes glow {
+    0% {
+        box-shadow: 5px 5px 20px white,
+        -5px -5px 20px white;
+    }
+    50% {
+        box-shadow: 5px 5px 20px white,
+        -5px -5px 20px white;
+    }
+    100% {
+        box-shadow: 5px 5px 20px white,
+        -5px -5px 20px white;
+    }
+}
+.fp .container .land {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+    position: relative;
+    top: 80px;
+}
+.fp .container .land .paragraph {
+    position: relative;
+    top: 80px;
+    width: 60%;
+}
+.fp .container .land .paragraph h1 {
+    font-size: xxx-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: lastica;
+    color: white;
+    text-align: center;
+}
+.fp .container .land .paragraph p {
+    color: white;
+    font-weight: bold;
+    font-size: 25.9px;
+    padding: 20px 45px;
+    font-family: sans-serif;
+}
+.fp .container .land button{
+    background-color: #11397d ;
+    border-radius: 90px;
+    padding: 20px 90px;
+    color: white;
+    border-color: white;
+    font-size: 30px;
+    margin: 40px 90px 90px;
+    border: none;
+    animation: glow 1s infinite;
+    transition: 0.5s;
+    font-weight: bold;
+    font-family: lastica;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.fp .container .land button:hover {
+    background-color: transparent;
+}
+/*end fp*/
+/*start about*/
+.about {
+background-color: #2F5C86;
+display: none;
+}
+.about .container .content1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    padding: 0 70px 50px 20px;
+
+}
+.about .container .content1 .paragraph2 {
+    color: white;
+    text-align: center;
+}
+.about .container .content1 .paragraph2 p {
+    margin: 0 20px;
+    font-size: large;
+}
+.about .container .content1 .paragraph2 h2 {
+    font-size: xx-large;
+}
+/*end about*/
+/*start services*/
+.services {
+    background-image: var(--main-color);
+    display: none;
+}
+.services .container .content2{
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family: sans-serif;
+position: relative;
+height: 500px;
+top: 50px;
+}
+
+.services .container .content2 .sbuttons .button-one {
+    position: relative;
+}
+.services .container .content2 .sbuttons .button-one form {
+    position: relative;
+}
+.services .container .content2 .sbuttons .button-one form input{
+    border-radius: 20px;
+    position: relative;
+    left: 20px;
+    border-color: transparent;
+    cursor: pointer;
+    height: 85px;
+    width: 900px;
+    text-transform: capitalize;
+    font-size: 24px;
+    text-indent: 20px;
+}
+.services .container .content2 .sbuttons .button-one .one-plus {
+    position: absolute;
+    bottom: 60px;
+    left: 35px;
+    border-radius: 25px;
+    width: 130px;
+    text-align: center;
+    height: 45px;
+    color: white;
+    background-image: var(--background-image);
+    border-color: transparent;
+    text-transform: capitalize;
+    font-size: 24px;
+}
+.services .container .content2 .sbuttons .button-two {
+position: relative;
+} 
+.services .container .content2 .sbuttons .button-two form input {
+    border-radius: 20px;
+    position: relative;
+    left: 20px;
+    border-color: transparent;
+    cursor: pointer;
+    height: 85px;
+    width: 900px;
+    text-transform: capitalize;
+    font-size: 24px;
+    text-indent: 20px;
+    top: 20px;
+} 
+.services .container .content2 .sbuttons .button-two  .two-plus{
+    position: absolute;
+    right: 0;
+    border-radius: 25px;
+    width: 130px;
+    text-align: center;
+    height: 45px;
+    color: white;
+    background-image: var(--background-image);
+    border-color: transparent;
+    text-transform: capitalize;
+    font-size: 24px;
+} 
+.services .container .content2 .sbuttons .b-search{
+    background-color: #11397d ;
+    border-radius: 90px;
+    color: white;
+    border-color: white;
+    font-size: 30px;
+    margin: 90px 30px 0;
+    border: none;
+    animation: glow 1s infinite;
+    transition: 0.5s;
+    font-weight: bold;
+    font-family: lastica;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 300px;
+    height: 80px;
+}
+.services .container .content2 .sbuttons .b-search:hover {
+    background-color: transparent;
+}
+.services .container .content2 .info img {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    left: 150px;
+    bottom: 20px;
+    transform: scaleX(-1);
+}
+
+.services .container .content2 .info {
+    position: relative;
+    top: -50px;
+}
+.services .container .content2 .info p {
+    position: relative;
+    left: 100px;
+    color: white;
+    font-size: x-large;
+    padding: 20px 0;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+/*end services*/
+
+/*start result*/
+.search-result{
+    background-image:var(--background-image) ;
+    display:none ;
+    height: 800px;
+}
+.search-result img {
+    width: 40%;
+    position: relative;
+    left: 60%;
+    bottom: 65px;
+}
+.search-result .container .content{
+    height: 500px;
+    position: relative;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 1000px;
+    background-color: #27365B;
+    margin-top: 100px;
+    border-color: transparent;
+}
+.search-result .container .content .rbuttons .result{
+position: relative;
+}
+.search-result .container .content .rbuttons .result::after {
+    content: " ";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: white;
+    top: 300px;
+    right: 130px;
+}
+.search-result .container .content .rbuttons .result i {
+    color: #F2F2F2;
+    position: relative;
+    font-size: xx-large;
+    bottom: 18px;
+    left: 13px;
+}
+.search-result .container .content .rbuttons .result .r-one{
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border-color: transparent;
+    color: white;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #9A9A9D;
+    position: relative;
+    left: 30px;
+    bottom: 23px;
+}
+.search-result .container .content .rbuttons .result .r-two{
+    position: relative;
+    left: 500px;
+    top: 50px;
+    width: 220px;
+    height: 40px;
+    border-radius: 50px;
+    border-color: transparent;
+    color: white;
+    background-image: var(--background-image);
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*end result*/
+/*start direction*/
+.directions {
+    height: 700px;
+    background-image: var(--background-image);
+    display: none;
+}
+.directions .full-content{
+    position: relative;
+    top: 150;
+    height: 600px;
+}
+.directions .direction-one {
+    position: relative;
+    display: flex;
+}
+.directions .direction-one .direction1 {
+    position: relative;
+}
+.directions .direction-one .direction1 i {
+    position: relative;
+    left: 150px;
+    font-size: xx-large;
+    color: white;
+}
+.directions .direction-one .direction1 h4 { 
+    position: relative;
+    left: 90px;
+    padding-top: 20px;
+    color: white;
+    text-transform: capitalize;}
+.directions .direction-one .direction1 p{
+    position: relative;
+    left: 90px;
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 40px;
+}
+.directions .direction-one .direction1 hr {
+    width: 500px;
+    position: relative;
+    left: 150px;
+}
+.directions .direction-one button {
+    height: 50px;
+    width: 190px;
+    border-radius: 50px;
+    border-color: transparent;
+    color: white;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: var(--background-image);
+}
+.directions .direction-two {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.directions .direction-two .direction2 {
+    position: relative;
+}
+.directions .direction-two .direction2 i {
+    position: relative;
+    left: 270px;
+    font-size: xx-large;
+    color: white;
+}
+.directions .direction-two .direction2 h4 { 
+    position: relative;
+    left: 90px;
+    padding-top: 20px;
+    color: white;
+    text-transform: capitalize;}
+
+.directions .direction-two .direction2 p{
+    position: relative;
+    left: 90px;
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 40px;
+}
+.directions .direction-two .direction2 hr {
+    width: 500px;
+    position: relative;
+    left: 150px;
+}
+.directions .direction-two button:first-of-type {
+    height: 50px;
+    width: 190px;
+    border-radius: 50px;
+    border-color: transparent;
+    color: white;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: var(--background-image);
+    position: relative;
+    right: 230px;
+}
+.directions .direction-two .r-one {
+    width: 150px;
+    height: 40px;
+    border-color: transparent;
+    color: white;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #9A9A9D;
+    position: relative;
+    right: 80%;
+}
+.directions .hr {
+    transform: rotate(90deg);
+    position: relative;
+    right: 350px;
+}
+.directions .km {
+    position: relative;
+    color: white;
+    font-weight: bold;
+}
+.directions .km p {
+    position: relative;
+    top: 120px;
+}
+.directions .km h4::before {
+    content: " ";
+    position: absolute;
+    width: 38%;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s;
+    transform: rotate(90deg);
+    left: -170;
+}
+.directions .km h4{
+    position: relative;
+    top: 270;
+}
+/*end direction*/
+/*start contact*/
+.contact {
+    background-image: var(--background-image);
+    position: relative;
+    display: none;
+    top: 150px;
+}
+.contact .container .info-video{
+    display: flex;
+    justify-content: space-between;
+}
+.contact .container .info-video .info {
+    position: relative;
+}
+.contact .container .info-video .info .info1 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 30px;
+}
+.contact .container .info-video .info .info1 i {
+    color: white;
+    font-size: xx-large;
+}
+.contact .container .info-video .info .info1 .p-s p {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+.contact .container .info-video .info  .info1 .p-s {
+    position: relative;
+    right: 70px;
+}
+.contact .container .info-video .info .info2 .p-s {
+    position: relative;
+    left: 30px;
+}
+.contact .container .info-video .info .info2 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 70px;
+    left: 100px;
+}
+.contact .container .info-video .info .info2 i {
+    color: white;
+    font-size: xx-large;
+}
+.contact .container .info-video .info .info2 .p-s p {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+.contact .container .footer {
+position: relative;
+    height: 350px;
+    top: 200px;
+}
+.contact .container .footer .footer-inf {
+    display: flex;
+    width: 40%;
+    height: 50px;
+    margin-left: 40px;
+    justify-content: space-around;
+    padding-top: 10px;
+    background-color: transparent;
+    border-radius: 90px;
+    color: white;
+    border-color: white;
+    font-size: 30px;
+    border: none;
+    animation: glow 1s infinite;
+    transition: 0.5s;
+    font-weight: bold;
+    font-family: lastica;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.contact .container .footer .footer-inf p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+.contact .container .footer .footer-inf .icons a i {
+    color: white;
+    padding-right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.contact .container .footer .span  i{
+    position: relative;
+    left: 95%;
+    border: 2px solid white;
+    transform: rotate(90deg);
+    border-radius: 40px;
+    padding: 12px;
+    bottom: 55px;
+    color: white;
+    border-color: white;
+    animation: glow 1s infinite;
+    transition: 0.5s;
+    cursor: pointer;
+}
+/*end contact*/
